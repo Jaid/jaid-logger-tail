@@ -5,7 +5,10 @@
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
     "@babel/runtime": "^7.5.5",
+    "app-folder": "^1.0.0",
     "execa": "^2.0.3",
+    "globby": "^10.0.1",
+    "moment": "^2.24.0",
     "yargs": "^13.3.0"
   },
   "devDependencies": {
@@ -18,6 +21,7 @@
     "coffee": "^5.2.1",
     "eslint": "^6.1.0",
     "eslint-config-jaid": "^1.26.0",
+    "jaid-logger": "^1.4.1",
     "jest": "^24.8.0",
     "rimraf": "^2.6.3",
     "webpack-config-jaid": "^5.23.0"

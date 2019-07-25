@@ -1,46 +1,26 @@
 import path from "path"
 
 import yargs from "yargs"
-import execa from "execa"
+import getAppFolder from "app-folder"
+import moment from "moment"
+import globby from "globby"
 
-const job = ({kiosk, userDataDir, chromePath, url}) => {
-  const parameters = []
-  if (userDataDir) {
-    parameters.push("--user-data-dir", userDataDir)
-  }
-  if (kiosk) {
-    parameters.push("--chrome-frame", "--disable-features=TranslahteUI", `--app=${url}`)
-  } else {
-    parameters.push(url)
-  }
-  execa.sync(chromePath, parameters, {
-    detached: true,
+const job = async ({name}) => {
+  const appFolder = getAppFolder(name)
+  const logFolder = path.join(appFolder, "log")
+  const dateSuffix = moment().format("YYYY-MM-DD")
+  const logFiles = await globby(`*_${dateSuffix}.txt`, {
+    cwd: logFolder,
+    onlyFiles: true,
+    absolute: true,
   })
+  process.stdout.write(`tail -f ${logFiles.map(file => `"${file}"`).join(" ")}`)
 }
 
 const builder = {
-  kiosk: {
-    type: "boolean",
-    default: false,
-    description: "Opens Chrome in kiosk mode",
-  },
-  "user-data-dir": {
-    type: "string",
-    description: "Path to the Chrome user data directory",
-  },
-  "chrome-path": {
-    type: "string",
-    default: "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe" |> path.resolve,
-    description: "Path to Chrome binary",
-  },
-  url: {
-    type: "string",
-    default: "https://twitch.tv/dashboard",
-    description: "URL to open",
-  },
 }
 
 yargs
   .scriptName(_PKG_NAME)
   .version(_PKG_VERSION)
-  .command("$0", "Opens twitch.tv/dashboard in a browser", builder, job).argv
+  .command("$0 <name>", "Generates a tail command to read log files created by jaid-logger.", builder, job).argv
