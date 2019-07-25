@@ -22,7 +22,7 @@ const job = async ({name, generate, excludeLevels}) => {
   }
   const getColor = level => {
     if (level === "debug") {
-      return chalk.magenta
+      return chalk.green
     }
     if (level === "info") {
       return chalk.cyan
