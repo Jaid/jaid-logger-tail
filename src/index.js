@@ -6,6 +6,8 @@ import moment from "moment"
 import globby from "globby"
 import chalk from "chalk"
 import Tail from "tail-file"
+import fss from "@absolunet/fss"
+import filesize from "filesize"
 
 const job = async ({name, generate, excludeLevels}) => {
   const appFolder = getAppFolder(name)
@@ -54,6 +56,11 @@ const job = async ({name, generate, excludeLevels}) => {
   }
   // eslint-disable-next-line no-unused-vars
   const tails = logFiles.map(logFile => {
+    process.stdout.write(`${chalk.cyan("tail -f")} ${chalk.yellow(`"${logFile}"`)}\n`)
+    const {size} = fss.stat(logFile)
+    if (size) {
+      process.stdout.write(`${chalk.green(filesize(size))}\n`)
+    }
     const tail = new Tail(logFile)
     tail.on("line", line => {
       const processedLine = processLine(line)
@@ -62,7 +69,6 @@ const job = async ({name, generate, excludeLevels}) => {
       }
     })
     tail.start()
-    process.stdout.write(`${chalk.cyan("tail -f")} ${chalk.yellow(`"${logFile}"`)}\n`)
     return tail
   })
 }

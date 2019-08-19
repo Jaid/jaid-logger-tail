@@ -4,10 +4,12 @@
   "version": "2.0.0",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
+    "@absolunet/fss": "^1.6.1",
     "@babel/runtime": "^7.5.5",
     "app-folder": "^1.0.0",
     "chalk": "^2.4.2",
     "execa": "^2.0.4",
+    "filesize": "^4.1.2",
     "globby": "^10.0.1",
     "moment": "^2.24.0",
     "tail-file": "^1.4.13",
