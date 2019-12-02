@@ -3,6 +3,15 @@
 
 Generates a tail command to read log files created by jaid-logger.
 
+## Installation
+<a href='https://npmjs.com/package/jaid-logger-tail'><img alt='npm logo' src='https://raw.githubusercontent.com/npm/logos/master/npm%20logo/npm-logo-red.png' height=16/></a>
+```bash
+npm install --global jaid-logger-tail@^
+```
+<a href='https://yarnpkg.com/package/jaid-logger-tail'><img alt='Yarn logo' src='https://raw.githubusercontent.com/yarnpkg/assets/master/yarn-kitten-full.png' height=24/></a>
+```bash
+yarn global add jaid-logger-tail@^
+```
 
 
 ## Try it out
