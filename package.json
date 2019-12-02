@@ -42,5 +42,6 @@
     "test:debug": "DEBUG=\"$DEBUG,$(basename $PWD),$(basename $PWD):*\" NODE_ENV=test node --inspect=9229 node_modules/jest/bin/jest.js --runInBand",
     "prepareActionJest": "npm run build:prod"
   },
-  "name": "jaid-logger-tail"
+  "name": "jaid-logger-tail",
+  "description": "Generates a tail command to read log files created by jaid-logger."
 }
