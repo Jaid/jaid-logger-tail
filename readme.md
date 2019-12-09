@@ -4,31 +4,16 @@
 Generates a tail command to read log files created by jaid-logger.
 
 ## Installation
-<a href='https://npmjs.com/package/jaid-logger-tail'><img alt='npm logo' src='https://raw.githubusercontent.com/npm/logos/master/npm%20logo/npm-logo-red.png' height=16/></a>
+<a href='https://npmjs.com/package/jaid-logger-tail'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
 ```bash
-npm install --global jaid-logger-tail@^
+npm install --global jaid-logger-tail@^2.1.0
 ```
-<a href='https://yarnpkg.com/package/jaid-logger-tail'><img alt='Yarn logo' src='https://raw.githubusercontent.com/yarnpkg/assets/master/yarn-kitten-full.png' height=24/></a>
+<a href='https://yarnpkg.com/package/jaid-logger-tail'><img alt='Yarn logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/yarn.png'/></a>
 ```bash
-yarn global add jaid-logger-tail@^
+yarn global add jaid-logger-tail@^2.1.0
 ```
 
 
-## Try it out
-Open a browser's JavaScript console and execute:
-
-```javascript
-const scriptElement = document.createElement("script");
-scriptElement.setAttribute("type","text/javascript");
-scriptElement.setAttribute("src","https://unpkg.com/jaid-logger-tail@2.1.0");
-document.querySelector("head").appendChild(scriptElement);
-```
-
-The module is now loaded in a variable.
-
-```javascript
-typeof jaid-logger-tail.default
-```
 
 
 ## License
