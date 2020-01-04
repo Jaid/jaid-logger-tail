@@ -13,7 +13,7 @@ const job = async ({name, generate, excludeLevels}) => {
   const appFolder = getAppFolder(name)
   const logFolder = path.join(appFolder, "log")
   const dateSuffix = moment().format("YYYY-MM-DD")
-  const logFiles = await globby(`*_${dateSuffix}.txt`, {
+  const logFiles = await globby(`**/${dateSuffix}.txt`, {
     cwd: logFolder,
     onlyFiles: true,
     absolute: true,
