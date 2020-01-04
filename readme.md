@@ -3,15 +3,41 @@
 
 Generates a tail command to read log files created by jaid-logger.
 
+<a href="https://raw.githubusercontent.com/Jaid/jaid-logger-tail/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/jaid-logger-tail?style=flat-square&color=success" alt="License"/></a>  
+<a href="https://github.com/Jaid/jaid-logger-tail/commits"><img src="https://img.shields.io/github/commits-since/Jaid/jaid-logger-tail/v2.1.0?style=flat-square&logo=github&color=success" alt="Commits since v2.1.0"/></a> <a href="https://github.com/Jaid/jaid-logger-tail/commits"><img src="https://img.shields.io/github/last-commit/Jaid/jaid-logger-tail?style=flat-square&logo=github&color=red" alt="Last commit"/></a> <a href="https://github.com/Jaid/jaid-logger-tail/issues"><img src="https://img.shields.io/github/issues/Jaid/jaid-logger-tail?style=flat-square&logo=github&color=red" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/jaid-logger-tail"><img src="https://img.shields.io/npm/v/jaid-logger-tail?style=flat-square&logo=npm&label=latest%20version&color=success" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/jaid-logger-tail/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/jaid-logger-tail?style=flat-square&logo=npm&color=red" alt="Dependents"/></a> <a href="https://npmjs.com/package/jaid-logger-tail"><img src="https://img.shields.io/npm/dm/jaid-logger-tail?style=flat-square&logo=npm&color=red" alt="Downloads"/></a>
+
+
+
+
+
+
+
+
+
 ## Installation
-<a href='https://npmjs.com/package/jaid-logger-tail'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
+<a href="https://npmjs.com/package/jaid-logger-tail"><img src="https://img.shields.io/badge/npm-jaid--logger--tail-C23039?style=flat-square&logo=npm" alt="jaid-logger-tail on npm"/></a>
 ```bash
 npm install --global jaid-logger-tail@^2.1.0
 ```
-<a href='https://yarnpkg.com/package/jaid-logger-tail'><img alt='Yarn logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/yarn.png'/></a>
+<a href="https://yarnpkg.com/package/jaid-logger-tail"><img src="https://img.shields.io/badge/Yarn-jaid--logger--tail-2F8CB7?style=flat-square&logo=yarn&logoColor=white" alt="jaid-logger-tail on Yarn"/></a>
 ```bash
 yarn global add jaid-logger-tail@^2.1.0
 ```
+
+
+
+
+## CLI Usage
+After installing package `jaid-logger-tail` globally, you can use its command line interface.
+```bash
+jaid-logger-tail 'My App'
+```
+For usage instructions:
+```bash
+jaid-logger-tail --help
+```
+
 
 
 
