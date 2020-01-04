@@ -1,7 +1,6 @@
-import path from "path"
-
 import coffee from "coffee"
 import jaidLogger from "jaid-logger"
+import path from "path"
 
 const main = path.resolve(process.env.MAIN)
 
@@ -12,6 +11,6 @@ logger.info("Hi")
 
 it("should run", () => coffee.fork(main, [loggerId, "--generate"])
   .expect("code", 0)
-  .expect("stdout", /^tail -f .+jaid-logger-tail-test[/\\]log[/\\]jaidLoggerTailTest/)
+  .expect("stdout", /^tail -f .+jaid-logger-tail-test[/\\]log[/\\]error[/\\]/)
   .debug(true)
   .end())

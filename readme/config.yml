@@ -1,1 +1,2 @@
 installation: global
+binExample: jaid-logger-tail 'My App'

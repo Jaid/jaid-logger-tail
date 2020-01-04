@@ -1,41 +1,40 @@
-import path from "path"
-
-import yargs from "yargs"
-import getAppFolder from "app-folder"
-import moment from "moment"
-import globby from "globby"
-import chalk from "chalk"
-import Tail from "tail-file"
 import fss from "@absolunet/fss"
+import getAppFolder from "app-folder"
+import chalk from "chalk"
 import filesize from "filesize"
+import globby from "globby"
+import moment from "moment"
+import Tail from "tail-file"
+import yargs from "yargs"
+
+function getColorFromLevel(level) {
+  const levelNormalized = level.toLowerCase()
+  if (levelNormalized === "debug") {
+    return chalk.green
+  }
+  if (levelNormalized === "info") {
+    return chalk.cyan
+  }
+  if (levelNormalized === "warn") {
+    return chalk.yellow
+  }
+  if (levelNormalized === "error") {
+    return chalk.red
+  }
+  return null
+}
 
 const job = async ({name, generate, excludeLevels}) => {
   const appFolder = getAppFolder(name)
-  const logFolder = path.join(appFolder, "log")
   const dateSuffix = moment().format("YYYY-MM-DD")
-  const logFiles = await globby(`**/${dateSuffix}.txt`, {
-    cwd: logFolder,
+  const logFiles = await globby(`log/*/${dateSuffix}.txt`, {
+    cwd: appFolder,
     onlyFiles: true,
     absolute: true,
   })
   if (generate) {
     process.stdout.write(chalk.yellow(`tail -f ${logFiles.map(file => `"${file}"`).join(" ")}\n`))
     return
-  }
-  const getColor = level => {
-    if (level === "debug") {
-      return chalk.green
-    }
-    if (level === "info") {
-      return chalk.cyan
-    }
-    if (level === "warn") {
-      return chalk.yellow
-    }
-    if (level === "error") {
-      return chalk.red
-    }
-    return null
   }
   const processLine = line => {
     const regex = /\[(?<time>.+?) +(?<level>\w+)] +(?<text>.*)/
@@ -47,7 +46,7 @@ const job = async ({name, generate, excludeLevels}) => {
     if (excludeLevels.some(excludeLevel => excludeLevel.toLowerCase() === level.toLowerCase())) {
       return null
     }
-    const color = getColor(level.toLowerCase())
+    const color = getColorFromLevel(level)
     if (color) {
       return color(`${time} ${text}`)
     } else {
