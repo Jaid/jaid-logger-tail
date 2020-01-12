@@ -4,12 +4,12 @@
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
     "@absolunet/fss": "^1.6.2",
-    "@babel/runtime": "^7.7.7",
+    "@babel/runtime": "^7.8.0",
     "app-folder": "^1.0.1",
     "chalk": "^3.0.0",
     "execa": "^4.0.0",
     "filesize": "^6.0.1",
-    "globby": "^10.0.1",
+    "globby": "^11.0.0",
     "moment": "^2.24.0",
     "tail-file": "^1.4.13",
     "yargs": "^15.1.0"
@@ -18,16 +18,16 @@
     "acorn": "^7.1.0",
     "ajv": "^6.10.2",
     "babel-jest": "^24.9.0",
-    "babel-preset-jaid": "^7.3.0",
+    "babel-preset-jaid": "^7.3.1",
     "browserslist-config-jaid-node": "^2.2.2",
-    "caniuse-lite": "^1.0.30001018",
+    "caniuse-lite": "^1.0.30001020",
     "coffee": "^5.2.2",
     "eslint": "^6.8.0",
-    "eslint-config-jaid": "^1.41.1",
+    "eslint-config-jaid": "^1.42.0",
     "jaid-logger": "^2.0.0",
     "jest": "^24.9.0",
     "rimraf": "^3.0.0",
-    "webpack-config-jaid": "^9.3.0"
+    "webpack-config-jaid": "^11.0.0"
   },
   "scripts": {
     "clean": "rimraf dist/",
