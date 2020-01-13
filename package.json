@@ -43,5 +43,6 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "jaid-logger-tail",
-  "description": "Generates a tail command to read log files created by jaid-logger."
+  "description": "Generates a tail command to read log files created by jaid-logger.",
+  "funding": "https://github.com/sponsors/jaid"
 }
