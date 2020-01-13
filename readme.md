@@ -1,9 +1,9 @@
 # jaid-logger-tail
 
 
-<a href="https://raw.githubusercontent.com/Jaid/jaid-logger-tail/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/jaid-logger-tail?style=flat-square" alt="License"/></a>  
-<a href="https://actions-badge.atrox.dev/Jaid/jaid-logger-tail/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fjaid-logger-tail%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/jaid-logger-tail/commits"><img src="https://img.shields.io/github/commits-since/Jaid/jaid-logger-tail/v3.0.0?style=flat-square&logo=github" alt="Commits since v3.0.0"/></a> <a href="https://github.com/Jaid/jaid-logger-tail/commits"><img src="https://img.shields.io/github/last-commit/Jaid/jaid-logger-tail?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/jaid-logger-tail/issues"><img src="https://img.shields.io/github/issues/Jaid/jaid-logger-tail?style=flat-square&logo=github" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/jaid-logger-tail"><img src="https://img.shields.io/npm/v/jaid-logger-tail?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/jaid-logger-tail/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/jaid-logger-tail?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/jaid-logger-tail"><img src="https://img.shields.io/npm/dm/jaid-logger-tail?style=flat-square&logo=npm" alt="Downloads"/></a>
+<a href="https://raw.githubusercontent.com/jaid/jaid-logger-tail/master/license.txt"><img src="https://img.shields.io/github/license/jaid/jaid-logger-tail?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/jaid"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor jaid-logger-tail"/></a>
+<a href="https://actions-badge.atrox.dev/jaid/jaid-logger-tail/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2Fjaid%2Fjaid-logger-tail%2Fbadge" alt="Build status"/></a> <a href="https://github.com/jaid/jaid-logger-tail/commits"><img src="https://img.shields.io/github/commits-since/jaid/jaid-logger-tail/v3.0.0?style=flat-square&logo=github" alt="Commits since v3.0.0"/></a> <a href="https://github.com/jaid/jaid-logger-tail/commits"><img src="https://img.shields.io/github/last-commit/jaid/jaid-logger-tail?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/jaid/jaid-logger-tail/issues"><img src="https://img.shields.io/github/issues/jaid/jaid-logger-tail?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/jaid-logger-tail"><img src="https://img.shields.io/npm/v/jaid-logger-tail?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/jaid/jaid-logger-tail/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/jaid-logger-tail?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/jaid-logger-tail"><img src="https://img.shields.io/npm/dm/jaid-logger-tail?style=flat-square&logo=npm" alt="Downloads"/></a>
 
 **Generates a tail command to read log files created by jaid-logger.**
 
@@ -33,7 +33,6 @@ yarn global add jaid-logger-tail@^3.0.0
 
 
 
-
 ## CLI Usage
 After installing package `jaid-logger-tail` globally, you can use its command line interface.
 ```bash
@@ -53,7 +52,7 @@ jaid-logger-tail --help
 
 Setting up:
 ```bash
-git clone git@github.com:Jaid/jaid-logger-tail.git
+git clone git@github.com:jaid/jaid-logger-tail.git
 cd jaid-logger-tail
 npm install
 ```
