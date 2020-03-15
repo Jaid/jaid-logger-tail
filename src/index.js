@@ -78,7 +78,7 @@ const job = async ({name, generate, excludeLevels}) => {
 const builder = {
   generate: {
     type: "boolean",
-    default: "false",
+    default: false,
     description: "Output `tail -f` shell command",
   },
   excludeLevels: {
