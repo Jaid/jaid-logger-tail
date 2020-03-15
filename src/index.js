@@ -48,7 +48,7 @@ const job = async ({name, generate, excludeLevels}) => {
     }
     const color = getColorFromLevel(level)
     if (color) {
-      return color(`${time} ${text}`)
+      return `${time} ${color(text)}`
     } else {
       return `${time} ${text}`
     }
