@@ -49,5 +49,16 @@
     "url": "https://github.com/jaid/jaid-logger-tail"
   },
   "homepage": "https://github.com/Jaid/jaid-logger-tail",
-  "keywords": []
+  "keywords": [
+    "cli",
+    "jaid-logger",
+    "logger",
+    "logging",
+    "tail",
+    "tail-command",
+    "tail-f",
+    "tool",
+    "util",
+    "utility"
+  ]
 }
