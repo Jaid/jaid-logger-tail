@@ -60,5 +60,6 @@
     "tool",
     "util",
     "utility"
-  ]
+  ],
+  "type": "module"
 }
